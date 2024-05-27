@@ -29,6 +29,8 @@ int main()
         case 1:
             push();
             break;
+
+            
         case 2:
             pop();
             break;
