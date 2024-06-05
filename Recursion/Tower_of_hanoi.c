@@ -1,19 +1,21 @@
-#include <stdio.h>
-
-void tower_of_hanoi(int n, int S, int T, int D) {
-    if (n == 1) {
-        printf("Move disk 1 from %d to %d\n", S, T);
-        return;
-    }
-    tower_of_hanoi(n - 1, S, D, T);
-    printf("Move disk %d from %d to %d\n", n, S, T);
-    tower_of_hanoi(n - 1, D, T, S);
+#include<stdio.h>
+int towerHanoi(int n,char s,char d,char t);
+int count;
+int main()
+{
+    int n;
+    printf("Enter number of disk : ");
+    scanf("%d",&n);
+    towerHanoi(n, 's', 'd', 't');
+    printf("Total number of moves : %d",count);
 }
-
-int main() {
-    int num_disks;
-    printf("enter number of disks:");
-    scanf("%d",&num_disks);
-    tower_of_hanoi(num_disks, 1, 2, 3);
-    return 0;
+int towerHanoi(int n,char s,char d,char t)
+{
+    if(n>0)
+    {
+        towerHanoi(n-1,s,t,d);
+        printf("Move %d disk from %c to %c \n", n,s,d);
+        towerHanoi(n-1,t,d,s);
+        count++;
+    }
 }

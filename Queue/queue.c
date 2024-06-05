@@ -67,7 +67,7 @@ void display(){
     }
   else {
     int i;
-    printf("elements in the stack are:\n");
+    printf("element in the stack are:\n");
     for (i = front; i <= rear; i++){
       printf("%d\n",q[i]);
     }

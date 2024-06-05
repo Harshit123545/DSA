@@ -55,7 +55,7 @@ void infixToPostfix(char s[])
         printf("%s",result);
     }
     int main(){
-        char exp[] = "((P+L)+(R+S))/T+((A*(B+C)))";
+        char exp[] = "((8+9)*5+(1*(2+3)*7)+12)";
         infixToPostfix(exp);
         return 0;
     }
