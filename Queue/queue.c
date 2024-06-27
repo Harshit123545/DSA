@@ -50,7 +50,7 @@ int insertion(int val){
     }
 }
 int deletion(int val){
-    if(rear==-1){
+    if(rear==-1){`
         printf("Underflow");
     }
     if(front=rear){
@@ -63,6 +63,8 @@ int deletion(int val){
 }
 void display(){
   if (front == -1){
+
+    
     printf("\nQ is empty");
     }
   else {
